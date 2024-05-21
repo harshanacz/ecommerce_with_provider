@@ -1,5 +1,7 @@
+import 'package:ecommerceapp/providers/products_provider.dart';
 import 'package:ecommerceapp/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(
@@ -12,9 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: appRoutes,
+    return ChangeNotifierProvider(
+      create: (context) => ProductProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: appRoutes,
+      ),
     );
   }
 }
