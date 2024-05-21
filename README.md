@@ -1,0 +1,1 @@
+Hold a Flutter series for newcomers to the mobile application development field. This is a repository for it. Within this repository, create an e-commerce mobile application using Provider.
